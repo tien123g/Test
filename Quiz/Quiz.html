@@ -14,9 +14,9 @@
     <h1>Our Class Quiz</h1>
     <nav>
         <ul>
-            <li><a href="#student-info">INFO</a></li>
-            <li><a href="#classmate-questions">CLASSMATE</a></li>
-            <li><a href="#homeroom teacher-questions">HOMEROOM TEACHER</a></li>
+            <li><a href="#student-info" accesskey="t">INFO</a></li>
+            <li><a href="#literature-questions" accesskey="l">LITERATURE</a></li>
+            <li><a href="#physics-questions" accesskey="p">PHYSICS</a></li>
         </ul>
     </nav>
     </header>
@@ -24,17 +24,66 @@
         <form action="https://freecodecamp.org/practice-project/accessibility-quiz" method="post">
             <section role="region" aria-labelledby="student-info">
                 <h2 id="student-info">Student-info</h2>
-                    <div class="info"><label for=""></label><input type="text"></div>
-                    <div class="info"><label for=""></label><input type="text"></div>
-                    <div class="info"><label for=""></label><input type="text"></div>
+                    <div class="info" ><label for="name"></label>Your Full Name: <input type="text" placeholder="Enter Your Full Name" required></div>
+                    <div class="info"><label for="email"></label>Your Email: <input type="email" placeholder="Enter Your Email" required></div>
+                    <div class="info"><label for="phone-number"></label>Your Phone Number: <input type="text" placeholder="Enter Your Phone Number" required></div>
+                    <div class="info"><label for="date-of-birth">D.O.B: <input type="date" required></label></div>
             </section>
-            <section role="region" aria-labelledby="classmate-questions">
-                <h2 id="classmate-questions">Classmate</h2>
+            <section role="region" aria-labelledby="literature-questions">
+                <h2 id="literature-questions">Literature</h2>
+                <div class="question-block">
+                    <p>1</p>
+                    <fieldset class="question" >
+                        <legend>Trường ca “Mặt đường khát vọng” được tác giả Nguyễn Khoa Điềm hoàn thành tại đâu?</legend>
+                        <ul required>
+                        <li><label for="q1-a1"><input type="radio" id="q1-a1" value="A1" name="q1"></label>A. Hoàn thành ở chiến khu Trị - Thiên năm 1971</li>
+                        <li><label for="q1-a2"><input type="radio" id="q1-a2" value="B1" name="q1"></label>B. Hoàn thành ở chiến khu Trị - Thiên năm 1972</li>
+                        <li><label for="q1-a3"><input type="radio" id="q1-a3" value="C1" name="q1"></label>C. Hoàn thành ở chiến khu Trị - Thiên năm 1973</li>
+                        <li><label for="q1-a4"><input type="radio" id="q1-a4" value="D1" name="q1"></label>D. Hoàn thành ở chiến khu Trị - Thiên năm 1974</li>
+                      </ul>
+                      </fieldset>
+                </div>
+                <div class="question-block">
+                    <p>2</p>
+                    <fieldset class="question">
+                        <legend>Đáp án nào không đúng khi nói về vẻ đẹp tâm hồn của nhân vật Tràng?</legend>
+                        <ul required>
+                        <li><label for="q2-a1"><input type="radio" id="q2-a1" value="A2" name="q2">A. Thuần hậu, hiền lành, chất phác</label></li>
+                        <li><label for="q2-a2"><input type="radio" id="q2-a2" value="B2" name="q2">B. Tâm hồn lạc quan, yêu đời</label></li>
+                        <li><label for="q2-a3"><input type="radio" id="q2-a3" value="C2" name="q2">C. Sức sống tiềm tàng và sức phản kháng mãnh liệt</label></li>
+                        <li><label for="q2-a4"><input type="radio" id="q2-a4" value="D2" name="q2">D. Tấm lòng nhân hậu</label></li>
+                      </ul>
+                      </fieldset>
+                </div>
             </section>
-            <section role="region" aria-labelledby="homeroom teacher-questions">
-                <h2 id="homeroom teacher-questions">Homeroom Teacher</h2>
+            <section role="region" aria-labelledby="physics-questions">
+                <h2 id="physics-questions">Physics</h2>
+                <div class="formrow">
+                    <div class="question-block">
+                        <label for="answer">Bạn có theo khối có Vật Lý hay không ?</label>
+                    </div>
+                    <div class="answer">
+                        <select required id="answer" name="ans" required>
+                            <option value="">Chọn một đáp án</option>
+                            <option value="yes">Có</option>
+                            <option value="no">Không</option>
+                        </select>
+                    </div>
+                    <div class="question-block">
+                        <label for="answer-2">Viết những gì bạn biết về môn Vật Lý ?</label>
+                    </div>
+                    <div class="answer">
+                        <textarea name="a2" id="answer-2" cols="30" rows="10" placeholder="Viết đáp án của bạn ở đây" required></textarea>
+                    </div>
+                  </div>
             </section>
+            <button type="submit" accesskey="s">SEND</button>
         </form>
 </main>
+<footer>
+    <address>
+        Made by <a href="https://www.facebook.com/profile.php?id=100007238687110">Tiến Phan</a><br>
+    </address>
+</footer>
 </body>
 </html>

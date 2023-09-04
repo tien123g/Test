@@ -1,0 +1,9 @@
+.title{
+    text-align:center;
+}
+body{
+    align-items: center;
+    background-color: aqua;
+    margin:auto;
+    border:10px 10px 10px 10px;
+}

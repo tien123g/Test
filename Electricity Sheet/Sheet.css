@@ -1,0 +1,138 @@
+html{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Times New Roman', Times, serif;
+    color: #0a0a23;
+}
+span[class~="sr-only"]{
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  white-space: nowrap;
+  position:absolute;
+  padding:0;
+  margin:-1px;
+}
+/* span[class~="sr-only"] will choose all span that include the class with sr-only */
+h1{
+    max-width: 37.25rem;
+    margin: 0 auto;
+    padding:1.5rem 1.25rem;
+}
+h1 .flex{
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 1px;
+}
+h1 .flex span:first-of-type{
+    font-size: 0.7em;
+}
+/* :first-of-type will choose the first span in h1 */
+h1 .flex span:last-of-type{
+    font-size: 1.2em;
+}
+/* :last-of-type will choose the last span in h1 */
+section{
+    max-width: 40rem;
+    border: 2px solid #12e91d;
+    margin: 0 auto;
+}
+/* border will make the box for section */
+#years{
+    display:flex !important;
+    justify-content:flex-end !important;
+    position: sticky !important;
+    top:0 !important;
+    color: white !important;
+    background-color: black !important;
+    margin:0 -2px !important;
+    padding:0.5rem calc(1.25rem + 2px) 0.5rem 0 !important;
+    z-index: 999 !important;
+}
+/* !important will priority properties first */
+#years span[class]{
+    font-weight: bold;
+    width: 4.5rem;
+    text-align: right;
+}
+.table-wrap{
+    padding:0 0.75rem 1.5rem 0.75rem;
+}
+span{
+    font-weight:normal;
+}
+/* :not(.sr-only) will choose all span that not include the class sr-only */
+/* just delete :not(.sr-only) if have !important */
+table{
+    border-collapse:collapse;
+    border: 0;
+    margin-top:3rem;
+    position:relative;
+    width: 100%;
+}
+/* which will allow cell borders to collapse into a single border */
+table caption{
+    color:#356eaf;
+    font-size:1.3em;
+    font-weight:normal;
+    position:absolute;
+    top:-2.25rem;
+    left:0.5rem;
+}
+tbody td{
+    min-width:4rem;
+    max-width:4rem;
+    width:100vw;
+}
+tbody th{
+    width:calc(100%-12rem);
+  }
+tr[class="total"]{
+    border-bottom: 4px solid #0a0a23;
+    font-weight: bold;
+}
+tr[class="total"] th {
+    text-align: left;
+    padding: 0.5rem 0 0.25rem 0.5rem;
+  }
+  tr.total td{
+    text-align:right;
+    padding:0 0.25rem;
+  }
+  tr.total td:nth-of-type(3){
+    padding-right:0.5rem;
+  }
+  tr.total:hover{
+    background-color:#99c9ff;
+  }
+  td.current{
+    font-style: italic;
+  }
+  /* .current will choose the td with the class current */
+  tr.data{
+    background-image:linear-gradient(to bottom, #dfdfe2 1.845rem, white 1.845rem);
+  }
+  tr.data th{
+    text-align:left;
+    padding-top:0.3rem;
+    padding-left:0.5rem;
+  }
+  tr.data th .description{
+    display:block;
+    font-style:italic;
+    font-weight:normal;
+    padding:1rem 0 0.75rem;
+    margin-right:-13.5rem;
+  }
+  tr.data td{
+    text-align:right;
+    vertical-align:top;
+    padding:0.3rem 0.25rem 0;
+  }
+  tr.data td:last-of-type{
+    padding-right:0.5rem;
+  }
